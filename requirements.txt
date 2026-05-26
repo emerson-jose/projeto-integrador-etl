@@ -1,0 +1,9 @@
+PySide6
+pandas
+polars
+sqlalchemy
+psycopg2-binary
+playwright
+kaggle
+python-dotenv
+reportlab

@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+.env
+
+# Dados (Opcional: ignore se os dados forem muito grandes)
+dados_analise/
+dados_convertidos_prt/
+arquivos_tratados/
+
+# IDEs
+.vscode/
+.idea/
+
+# Outros
+bibliotecas_projeto.txt
+README_ETL_DETALHADO.md

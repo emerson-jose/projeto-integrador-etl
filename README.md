@@ -7,26 +7,26 @@ Este projeto implementa um pipeline de dados completo (Extração, Transformaç�
 ```mermaid
 flowchart TD
     %% Fontes de Entrada
-    Kaggle([<b>Kaggle API</b><br/>Dataset Externo])
-    Web([<b>Web Scraping</b><br/>Playwright])
+    Kaggle([Kaggle API - Dataset Externo])
+    Web([Web Scraping - Playwright])
 
     %% Pasta de Dados Brutos
-    Raw[(<b>dados_analise/</b><br/>Arquivos CSV)]
+    Raw[(dados_analise - Arquivos CSV)]
 
-    subgraph Transform [<b>Camada de Processamento (Polars Engine)</b>]
+    subgraph Transform [Camada de Processamento Polars Engine]
         direction TB
-        PQT[<b>Conversão Parquet</b><br/>Compactação]
-        Clean[<b>Tratamento de Dados</b><br/>Tipagem e Renomeação]
+        PQT[Conversão Parquet - Compactação]
+        Clean[Tratamento de Dados - Tipagem e Renomeação]
     end
 
     %% Pasta de Dados Tratados
-    Tratados[(<b>arquivos_tratados/</b><br/>Arquivos Otimizados)]
+    Tratados[(arquivos_tratados - Arquivos Otimizados)]
 
-    subgraph Output [<b>Entrega e Visualização</b>]
+    subgraph Output [Entrega e Visualização]
         direction TB
-        DB[(<b>Supabase Cloud</b><br/>PostgreSQL)]
-        UI{<b>Interface Gráfica</b><br/>PySide6}
-        PDF[[<b>Relatórios PDF</b>]]
+        DB[(Supabase Cloud - PostgreSQL)]
+        UI{Interface Gráfica - PySide6}
+        PDF[[Relatórios PDF]]
     end
 
     %% Conexões
@@ -42,11 +42,11 @@ flowchart TD
     style Kaggle fill:#bbdefb,stroke:#1976d2,color:#0d47a1
     style Web fill:#bbdefb,stroke:#1976d2,color:#0d47a1
     style Raw fill:#e3f2fd,stroke:#2196f3,stroke-dasharray: 5 5
-
+    
     style Transform fill:#fff9c4,stroke:#fbc02d,color:#f57f17
     style Clean fill:#fffde7,stroke:#fdd835
     style PQT fill:#fffde7,stroke:#fdd835
-
+    
     style Tratados fill:#c8e6c9,stroke:#4caf50,stroke-width:2px
     style DB fill:#a5d6a7,stroke:#2e7d32,color:#1b5e20
     style UI fill:#2b5278,stroke:#1e3d59,color:#fff

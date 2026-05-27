@@ -135,7 +135,7 @@ PROJETO-ETL/
 
 ### 📊 Visualização de Dados
 - **Matplotlib**: Geração de gráficos estáticos de alta qualidade com estética *Dark Premium*.
-- **Seaborn**: Visualizações estatísticas avançadas e mapas de calor.
+- **Seaborn**: Refinamento estético e visualizações estatísticas avançadas (como Boxplots para análise de outliers).
 - **Plotly**: Gráficos dinâmicos e dashboards interativos para análise exploratória.
 
 ### 💾 Infraestrutura & Backend

@@ -127,11 +127,26 @@ PROJETO-ETL/
 4. **Visualização:** Dashboard BI desenvolvido em **PySide6** com integração Matplotlib e exportação para PDF.
 
 ## 🛠️ Tecnologias Utilizadas
-- **Linguagem:** Python 3.10+
-- **Manipulação:** Polars, Pandas, NumPy.
-- **Banco de Dados:** Supabase (Nuvem).
-- **Interface:** PySide6.
-- **Relatórios:** ReportLab, Plotly.
+
+### 🐍 Core & Linguagem
+- **Python 3.10+**: Linguagem base do projeto.
+- **Polars**: Engine de alta performance para manipulação e transformação de dados (ETL).
+- **Pandas & NumPy**: Suporte para cálculos matemáticos e compatibilidade entre bibliotecas.
+
+### 📊 Visualização de Dados
+- **Matplotlib**: Geração de gráficos estáticos de alta qualidade com estética *Dark Premium*.
+- **Seaborn**: Visualizações estatísticas avançadas e mapas de calor.
+- **Plotly**: Gráficos dinâmicos e dashboards interativos para análise exploratória.
+
+### 💾 Infraestrutura & Backend
+- **Supabase (PostgreSQL Cloud)**: Banco de dados relacional hospedado na nuvem.
+- **SQLAlchemy**: ORM para comunicação robusta e segura com o banco de dados.
+- **Playwright**: Automação para extração de dados (Web Scraping) de fontes dinâmicas.
+
+### 🖥️ Interface & Relatórios
+- **PySide6 (Qt for Python)**: Framework profissional para a interface gráfica (GUI).
+- **ReportLab**: Motor de renderização para exportação de relatórios em PDF.
+- **Python-dotenv**: Gestão segura de variáveis de ambiente e credenciais.
 
 ---
 *Desenvolvido por Emerson José - Projeto Integrador ETL.*

@@ -65,19 +65,19 @@ flowchart TD
     DB <--> UI
     UI --- PDF
 
-    %% Estilos de Cores e Formas
-    style Kaggle fill:#bbdefb,stroke:#1976d2,color:#0d47a1
-    style Web fill:#bbdefb,stroke:#1976d2,color:#0d47a1
-    style Raw fill:#e3f2fd,stroke:#2196f3,stroke-dasharray: 5 5
+    %% Estilos de Cores e Formas (Garantindo contraste do texto)
+    style Kaggle fill:#bbdefb,stroke:#1976d2,color:#000
+    style Web fill:#bbdefb,stroke:#1976d2,color:#000
+    style Raw fill:#e3f2fd,stroke:#2196f3,stroke-dasharray: 5 5,color:#000
     
-    style Transform fill:#fff9c4,stroke:#fbc02d,color:#f57f17
-    style Clean fill:#fffde7,stroke:#fdd835
-    style PQT fill:#fffde7,stroke:#fdd835
+    style Transform fill:#fff9c4,stroke:#fbc02d,color:#000
+    style Clean fill:#fffde7,stroke:#fdd835,color:#000
+    style PQT fill:#fffde7,stroke:#fdd835,color:#000
     
-    style Tratados fill:#c8e6c9,stroke:#4caf50,stroke-width:2px
-    style DB fill:#a5d6a7,stroke:#2e7d32,color:#1b5e20
+    style Tratados fill:#c8e6c9,stroke:#4caf50,stroke-width:2px,color:#000
+    style DB fill:#a5d6a7,stroke:#2e7d32,color:#000
     style UI fill:#2b5278,stroke:#1e3d59,color:#fff
-    style PDF fill:#ffcdd2,stroke:#d32f2f,color:#b71c1c
+    style PDF fill:#ffcdd2,stroke:#d32f2f,color:#000
 ```
 
 ---
@@ -86,20 +86,34 @@ flowchart TD
 
 ```text
 PROJETO-ETL/
-├── backend/                # Núcleo de Processamento (Engine)
-│   ├── main.py             # Orquestrador principal do pipeline
-│   ├── extracao_*.py       # Scripts de coleta (API e Web)
-│   ├── tratando.py         # Lógica de limpeza com Polars
-│   ├── inserir_dados.py    # Conexão e Carga no Supabase (Nuvem)
-│   └── db_manager.py       # Gestão do banco de dados
-├── frontend/               # Interface do Usuário (GUI)
-│   ├── app_gui.py          # Janela principal (Dashboard)
-│   ├── estilos_visuais.py  # Definições de UI/UX
-│   └── componentes_*.py    # Widgets e painéis modulares
-├── dados_analise/          # Raw Data (CSV originais)
-├── dados_convertidos_prt/  # Cold Storage (Parquet bruto)
-├── arquivos_tratados/      # Staging Area (Parquet processado)
-└── requirements.txt        # Dependências do sistema
+├── backend/                    # Núcleo de Processamento (Engine)
+│   ├── analytics.py            # Análise de dados e métricas de desempenho
+│   ├── conecao_supar.py        # Configuração da conexão com Supabase
+│   ├── converter_parquet.py    # Conversão de CSV para Parquet (Otimização)
+│   ├── db_manager.py           # Gestão de banco de dados e operações CRUD
+│   ├── extracao_dados_web.py   # Coleta de dados via Web Scraping (Playwright)
+│   ├── extracao_teste.py       # Scripts de teste para validação de extração
+│   ├── funcoes.py              # Funções auxiliares e utilitárias do sistema
+│   ├── gerador_pdf.py          # Motor de geração de relatórios exportáveis
+│   ├── graficos_interativos.py # Geração de visualizações dinâmicas
+│   ├── graficos.py             # Visualizações estáticas (Matplotlib/Seaborn)
+│   ├── inserir_dados.py        # Lógica de carga (Load) no banco de dados
+│   ├── main.py                 # Orquestrador central do pipeline ETL
+│   └── tratando.py             # Limpeza e transformação profunda (Polars)
+├── frontend/                   # Interface do Usuário (Desktop GUI)
+│   ├── app_gui.py              # Janela principal e ponto de entrada da UI
+│   ├── componentes_interface.py # Widgets e componentes customizados
+│   ├── estilos_visuais.py      # Definições de temas e estilização (QSS)
+│   ├── janela_edicao.py        # Interface para edição de registros
+│   ├── painel_admin.py         # Módulo de administração e controle
+│   └── painel_dashboard.py     # Painel visual com indicadores e KPIs
+├── dados_analise/              # Raw Data (Arquivos CSV originais)
+├── dados_convertidos_prt/      # Cold Storage (Arquivos Parquet brutos)
+├── arquivos_tratados/          # Staging Area (Parquet processado e limpo)
+├── .env.example                # Template de variáveis de ambiente
+├── requirements.txt            # Dependências Python do projeto
+├── run.py                      # Atalho para execução do sistema completo
+└── organizar_projeto.py        # Script utilitário para organização de pastas
 ```
 
 ---

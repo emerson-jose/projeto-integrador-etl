@@ -140,6 +140,7 @@ PROJETO-ETL/
 
 ### 💾 Infraestrutura & Backend
 - **Supabase (PostgreSQL Cloud)**: Banco de dados relacional hospedado na nuvem.
+- **Kaggle API**: Biblioteca oficial para download automatizado e integração com datasets externos.
 - **SQLAlchemy**: ORM para comunicação robusta e segura com o banco de dados.
 - **Playwright**: Automação para extração de dados (Web Scraping) de fontes dinâmicas.
 

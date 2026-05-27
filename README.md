@@ -1,6 +1,33 @@
-#  Projeto Integrador ETL: Pipeline Cloud-Native
+# -Projeto-Integrador---ETL-e-An-lise-de-Dados
+Repositório do Projeto Integrador Aplicado em CD &amp; IA
+# 📊 Análise Preditiva e Desempenho de Vendas (CRM)
 
-Este projeto implementa um pipeline de dados completo (Extração, Transformação e Carga) com uma interface gráfica moderna e armazenamento em nuvem (Supabase). Abaixo, detalhamos a arquitetura e o fluxo de dados para apresentação acadêmica e documentação no GitHub.
+![Status](https://img.shields.io/badge/Status-Concluído-green)
+![Linguagem](https://img.shields.io/badge/Linguagem-Python%20%7C%20SQL-blue)
+![Visualização](https://img.shields.io/badge/Visualização-Power%20BI-yellow)
+
+## 🎯 Entendimento do Negócio
+
+**Definição do Problema:**
+O projeto visa analisar o pipeline de vendas de uma empresa B2B de hardware de computadores. O objetivo principal é responder à seguinte pergunta de negócio: *"Quais são os padrões e tendências no pipeline de vendas que podem ser alavancados para otimizar as estratégias comerciais e maximizar a receita?"*
+
+**Matriz de KPIs Estabelecida:**
+1. Receita Total (Faturamento)
+2. Taxa de Conversão (Win Rate)
+3. Ticket Médio por Conta
+4. Faturamento por Setor (Indústria)
+5. Eficiência do Funil (Ciclo de Vendas em dias)
+6. Ranking de Performance das Equipes de Vendas
+
+## 📂 Fonte de Dados
+O conjunto de dados utilizado é o **"Predictive Analytics for CRM Sales Performance"**, extraído do Kaggle. Ele contém dados estruturados sobre contas (clientes corporativos), produtos, equipes de vendas e oportunidades de negócios (prospects).
+- Link da base: [Kaggle Dataset](https://www.kaggle.com/datasets/agungpambudi/predictive-analytics-for-crm-sales-performance)
+
+---
+
+# 🚀 Implementação Técnica: Pipeline Cloud-Native
+
+Este projeto implementa um pipeline de dados completo (Extração, Transformação e Carga) com uma interface gráfica moderna e armazenamento em nuvem (Supabase). Abaixo, detalhamos a arquitetura e o fluxo de dados.
 
 ## 📊 Fluxograma do Processo (Pipeline ETL)
 
@@ -57,8 +84,6 @@ flowchart TD
 
 ## 🏗️ Estrutura da Árvore de Diretórios
 
-O projeto está organizado de forma modular para facilitar a manutenção e escalabilidade:
-
 ```text
 PROJETO-ETL/
 ├── backend/                # Núcleo de Processamento (Engine)
@@ -79,37 +104,20 @@ PROJETO-ETL/
 
 ---
 
-## ⚙️ Funcionamento Detalhado
-
-### 1. Extração (Extraction)
-Utilizamos uma abordagem híbrida:
-*   **Kaggle API:** Coleta automatizada de datasets estruturados.
-*   **Playwright:** Automação de navegador para capturar dados de fontes web que não possuem API.
-
-### 2. Transformação (Transformation)
-Focamos em performance utilizando a biblioteca **Polars**:
-*   **Conversão:** Transformamos CSVs pesados em arquivos Parquet (compactos e rápidos).
-*   **Limpeza:** Renomeação de colunas para padrão de banco de dados, conversão de tipos (datas e valores monetários) e tratamento de valores nulos.
-
-### 3. Carga (Load)
-*   **Supabase:** Os dados são enviados para tabelas de *staging* no PostgreSQL hospedado na nuvem.
-*   **SQLAlchemy:** Gerencia as transações e garante a integridade dos dados durante o envio.
-
-### 4. Interface e Analytics (UI/UX)
-*   **PySide6:** Interface profissional com suporte a temas.
-*   **Visualização:** Integração com Plotly e Matplotlib para gerar insights em tempo real e relatórios em PDF.
-
----
+## ⚙️ Arquitetura e Processo ETL (Implementação)
+1. **Extração:** Coleta híbrida via **Kaggle API** e **Playwright** (Web Scraping).
+2. **Transformação (Polars Engine):**
+   - Conversão para **Parquet** para máxima performance.
+   - Tratamento de nulos, tipagem e renomeação de colunas.
+3. **Carga:** Sincronização direta com **Supabase (PostgreSQL Cloud)** utilizando SQLAlchemy.
+4. **Visualização:** Dashboard BI desenvolvido em **PySide6** com integração Matplotlib e exportação para PDF.
 
 ## 🛠️ Tecnologias Utilizadas
-
-*   **Linguagem:** Python 3.10+
-*   **Manipulação de Dados:** Polars, Pandas, NumPy.
-*   **Interface:** PySide6 (Qt para Python).
-*   **Banco de Dados:** Supabase (PostgreSQL Cloud).
-*   **Web Scraping:** Playwright.
-*   **Relatórios:** ReportLab, Plotly.
+- **Linguagem:** Python 3.10+
+- **Manipulação:** Polars, Pandas, NumPy.
+- **Banco de Dados:** Supabase (Nuvem).
+- **Interface:** PySide6.
+- **Relatórios:** ReportLab, Plotly.
 
 ---
-
-*Documentação gerada automaticamente para o Projeto Integrador ETL.*
+*Desenvolvido por Emerson José - Projeto Integrador ETL.*

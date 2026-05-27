@@ -29,7 +29,7 @@ O conjunto de dados utilizado é o **"Predictive Analytics for CRM Sales Perform
 
 Este projeto implementa um pipeline de dados completo (Extração, Transformação e Carga) com uma interface gráfica moderna e armazenamento em nuvem (Supabase). Abaixo, detalhamos a arquitetura e o fluxo de dados.
 
-## 📊 Fluxograma do Processo (Pipeline ETL)
+##  Fluxograma do Processo (Pipeline ETL)
 
 ```mermaid
 flowchart TD

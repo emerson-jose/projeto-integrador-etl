@@ -1,3 +1,8 @@
+
+
+https://github.com/user-attachments/assets/51185029-6141-476a-8e87-b27ddd245ce7
+
+<img width="691" height="743" alt="image (3)" src="https://github.com/user-attachments/assets/df6db34d-183f-49f2-9cb1-289f6450e7d9" />
 # -Projeto-Integrador---ETL-e-An-lise-de-Dados
 Repositório do Projeto Integrador Aplicado em CD &amp; IA
 # 📊 Análise Preditiva e Desempenho de Vendas (CRM)

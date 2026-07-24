@@ -1,6 +1,6 @@
-
-
 https://github.com/user-attachments/assets/51185029-6141-476a-8e87-b27ddd245ce7
+
+<img width="1364" height="762" alt="image (5)" src="https://github.com/user-attachments/assets/f1df60b7-8f63-436f-8ea6-67b1804e9618" />
 
 <img width="691" height="743" alt="image (3)" src="https://github.com/user-attachments/assets/df6db34d-183f-49f2-9cb1-289f6450e7d9" />
 # -Projeto-Integrador---ETL-e-An-lise-de-Dados
